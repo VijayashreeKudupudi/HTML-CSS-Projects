@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Open+Sans:wght@300&family=Roboto&family=Ubuntu:wght@300&display=swap");
+
+:root {
+  --background-pink-color: #fd3555;
+  --background-blue-color: #2a86ba;
+  --background-night-color: #252e33;
+  --background-sunset-color: #ffb866;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+}
+
+.slider-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.left-slide {
+  position: absolute;
+  height: 100%;
+  width: 35%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  margin-bottom: 10px;
+  margin-top: -30px;
+  font-size: 40px;
+}
+
+.background-pink {
+  background-color: var(--background-pink-color);
+}
+
+.background-blue {
+  background-color: var(--background-blue-color);
+}
+
+.background-night {
+  background-color: var(--background-night-color);
+}
+
+.background-sunset {
+  background-color: var(--background-sunset-color);
+}
+
+.right-slide {
+  position: absolute;
+  left: 35%;
+  height: 100%;
+  width: 65%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.right-slide > div {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #222;
+}
+
+button:focus {
+  outline: none;
+}
+
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
+}
+
+.slider-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.slider-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
